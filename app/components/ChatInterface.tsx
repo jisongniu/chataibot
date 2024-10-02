@@ -65,7 +65,7 @@ const ChatInterface: React.FC = () => {
                 ul: ({...props}) => <ul className="list-disc list-inside mb-3" {...props} />,
                 ol: ({...props}) => <ol className="list-decimal list-inside mb-3" {...props} />,
                 li: ({...props}) => <li className="mb-1" {...props} />,
-                code: ({inline, ...props}) => 
+                code: ({inline, ...props}: {inline?: boolean} & React.HTMLProps<HTMLElement>) => 
                   inline ? (
                     <code className="bg-gray-200 dark:bg-gray-700 px-1 rounded" {...props} />
                   ) : (
