@@ -58,14 +58,14 @@ const ChatInterface: React.FC = () => {
             <ReactMarkdown 
               rehypePlugins={[rehypeRaw]}
               components={{
-                p: ({node, ...props}) => <p className="mb-3" {...props} />,
-                h1: ({node, ...props}) => <h1 className="text-2xl font-bold mb-3" {...props} />,
-                h2: ({node, ...props}) => <h2 className="text-xl font-bold mb-2" {...props} />,
-                h3: ({node, ...props}) => <h3 className="text-lg font-bold mb-2" {...props} />,
-                ul: ({node, ...props}) => <ul className="list-disc list-inside mb-3" {...props} />,
-                ol: ({node, ...props}) => <ol className="list-decimal list-inside mb-3" {...props} />,
-                li: ({node, ...props}) => <li className="mb-1" {...props} />,
-                code: ({node, inline, ...props}) => 
+                p: ({...props}) => <p className="mb-3" {...props} />,
+                h1: ({...props}) => <h1 className="text-2xl font-bold mb-3" {...props} />,
+                h2: ({...props}) => <h2 className="text-xl font-bold mb-2" {...props} />,
+                h3: ({...props}) => <h3 className="text-lg font-bold mb-2" {...props} />,
+                ul: ({...props}) => <ul className="list-disc list-inside mb-3" {...props} />,
+                ol: ({...props}) => <ol className="list-decimal list-inside mb-3" {...props} />,
+                li: ({...props}) => <li className="mb-1" {...props} />,
+                code: ({inline, ...props}) => 
                   inline ? (
                     <code className="bg-gray-200 dark:bg-gray-700 px-1 rounded" {...props} />
                   ) : (
